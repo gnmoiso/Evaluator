@@ -1,10 +1,12 @@
 ﻿namespace Evaluator.Core;
 
-public class expresionEvaluator
+public class ExpresionEvaluator
 {
     public static double Evaluate(string infix)
     {
         var postfix = InfixToPostfix(infix);
+        var listNew = new List<string>(); // this is for numbers with more than one digit
+
         return Calculate(postfix);
     }
 
