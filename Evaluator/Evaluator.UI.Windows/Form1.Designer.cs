@@ -364,6 +364,7 @@
             Controls.Add(btnZero);
             Controls.Add(btn1);
             Controls.Add(txtDisplay);
+            ForeColor = SystemColors.ControlText;
             Name = "Form1";
             Text = "Functions Evaluator";
             ResumeLayout(false);

@@ -101,17 +101,26 @@ namespace Evaluator.UI.Windows
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text += $"={ExpresionEvaluator.Evaluate(txtDisplay.Text)}";
+            if (txtDisplay.Text == string.Empty) txtDisplay.Text = "";
+
+            else txtDisplay.Text += $"={ExpresionEvaluator.Evaluate(txtDisplay.Text)}";
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text.Remove(txtDisplay.Text.Length - 1);
+            if (txtDisplay.Text == string.Empty) txtDisplay.Text = ""; 
+            
+            else txtDisplay.Text = txtDisplay.Text.Remove(txtDisplay.Text.Length - 1);
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = string.Empty;
+            if (txtDisplay.Text == string.Empty) txtDisplay.Text = ""; 
+            
+            else txtDisplay.Text = string.Empty; 
+            
+                        
         }
     }
 }
