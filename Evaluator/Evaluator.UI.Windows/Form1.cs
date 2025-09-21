@@ -56,7 +56,7 @@ namespace Evaluator.UI.Windows
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = "0";
+            txtDisplay.Text += "0";
         }
 
         private void btnDot_Click(object sender, EventArgs e)
@@ -106,7 +106,12 @@ namespace Evaluator.UI.Windows
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            // Terminar el Del Y clear
+            txtDisplay.Text = txtDisplay.Text.Remove(txtDisplay.Text.Length - 1);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = string.Empty;
         }
     }
 }

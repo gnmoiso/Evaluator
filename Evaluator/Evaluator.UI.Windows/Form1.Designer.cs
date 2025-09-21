@@ -320,6 +320,7 @@
             btnClear.TabIndex = 20;
             btnClear.Text = "CLEAR";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnDel
             // 
@@ -364,7 +365,7 @@
             Controls.Add(btn1);
             Controls.Add(txtDisplay);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Functions Evaluator";
             ResumeLayout(false);
             PerformLayout();
         }
