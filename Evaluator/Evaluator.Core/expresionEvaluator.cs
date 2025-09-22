@@ -1,5 +1,7 @@
 ﻿namespace Evaluator.Core;
+
 using System.Globalization;
+
 public class ExpresionEvaluator
 {
     public static double Evaluate(string infix)
@@ -60,7 +62,7 @@ public class ExpresionEvaluator
                     while (stack.Count > 0 && PriorityStack(stack.Peek()[0]) >= PriorityInfix(item[0]))
                     {
                         if (stack.Peek() == "(") break;
-                            postfix.Add(stack.Pop());
+                        postfix.Add(stack.Pop());
                     }
                     stack.Push(item);
                 }
