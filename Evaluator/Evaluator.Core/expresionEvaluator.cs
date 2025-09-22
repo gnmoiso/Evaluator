@@ -1,5 +1,5 @@
 ﻿namespace Evaluator.Core;
-
+using System.Globalization;
 public class ExpresionEvaluator
 {
     public static double Evaluate(string infix)
@@ -113,7 +113,7 @@ public class ExpresionEvaluator
             }
             else
             {
-                stack.Push(Convert.ToDouble(item));
+                stack.Push(Convert.ToDouble(item, CultureInfo.InvariantCulture));
             }
         }
         return stack.Peek();
