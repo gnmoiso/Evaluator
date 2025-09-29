@@ -103,7 +103,7 @@ namespace Evaluator.UI.Windows
         {
             if (txtDisplay.Text == string.Empty) txtDisplay.Text = "";
 
-            else txtDisplay.Text += $"={ExpresionEvaluator.Evaluate(txtDisplay.Text)}";
+            else txtDisplay.Text = $"={ExpresionEvaluator.Evaluate(txtDisplay.Text)}";
         }
 
         private void btnDel_Click(object sender, EventArgs e)
